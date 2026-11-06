@@ -42,8 +42,8 @@ if app_mode == "📝 Data Entry (Staff)":
             entry_date = st.date_input("Date", datetime.now())
             department = st.selectbox("Department", ["Extruding MoNo", "Weaving","Mending-1","Scouring","Scouring RE","Stretching","Stretching QC","Mending-2","Packing MoNo"])
             unit = st.selectbox("Unit", ["kg", "pcs", "pot"])
-            attendance = st.number_input("Attendance (Count/Hours)", min_value=0.0, step=1.0)
-            ot = st.number_input("OT (Hours)", min_value=0.0, step=0.5)
+            attendance = st.number_input("Attendance (Employee)", min_value=0.0, step=1.0)
+            ot = st.number_input("OT (Employee)", min_value=0.0, step=0.5)
 
         with col2:
             production = st.number_input("Production", min_value=0.0, step=1.0)
