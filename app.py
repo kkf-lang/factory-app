@@ -22,9 +22,9 @@ def load_data():
         try:
             return pd.read_csv(DATA_FILE)
         except Exception:
-            return pd.DataFrame(columns=["Date", "Department", "Unit", "Attendance", "OT (Hrs)", "Production", "Cutting", "Damage", "Notes"])
+            return pd.DataFrame(columns=["Date", "Department", "Unit", "Attendance", "OT (Hrs)", "Production", "Cutting", "Net_Damage/RE", "Notes"])
     else:
-        return pd.DataFrame(columns=["Date", "Department", "Unit", "Attendance", "OT (Hrs)", "Production", "Cutting", "Damage", "Notes"])
+        return pd.DataFrame(columns=["Date", "Department", "Unit", "Attendance", "OT (Hrs)", "Production", "Cutting", "Net_Damage/RE", "Notes"])
 
 # Sidebar Navigation & Role Control
 st.sidebar.header("📌 System Navigation")
@@ -48,7 +48,7 @@ if app_mode == "📝 Data Entry (Staff)":
         with col2:
             production = st.number_input("Production", min_value=0.0, step=1.0)
             cutting = st.number_input("Cutting", min_value=0.0, step=1.0)
-            damage = st.number_input("Damage", min_value=0.0, step=1.0)
+            Net_Net_Damage/RE/RE = st.number_input("Net_Net_Damage/RE/RE", min_value=0.0, step=1.0)
             notes = st.text_area("Remarks / Notes", placeholder="မှတ်ချက်များ (လိုအပ်ပါက)...")
 
         submit_btn = st.form_submit_button("💾 Submit & Save Entry")
@@ -62,7 +62,7 @@ if app_mode == "📝 Data Entry (Staff)":
                 "OT": ot,
                 "Production": production,
                 "Cutting": cutting,
-                "Damage": damage,
+                "Net_Net_Damage/RE/RE": Net_Net_Damage/RE/RE,
                 "Notes": notes
             }])
             
@@ -114,7 +114,7 @@ elif app_mode == "🔐 Admin Portal":
             col_sum1.metric("Total Attendance", f"{df['Attendance'].sum():,.0f}")
             col_sum2.metric("Total OT Hours", f"{df['OT (Hrs)'].sum():,.1f} hrs")
             col_sum3.metric("Total Production", f"{df['Production'].sum():,.0f}")
-            col_sum4.metric("Total Damage", f"{df['Damage'].sum():,.0f}")
+            col_sum4.metric("Total Net_Damage/RE", f"{df['Net_Damage/RE'].sum():,.0f}")
             
             st.markdown("---")
             
