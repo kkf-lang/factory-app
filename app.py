@@ -48,7 +48,7 @@ if app_mode == "📝 Data Entry (Staff)":
         with col2:
             production = st.number_input("Production", min_value=0.0, step=1.0)
             cutting = st.number_input("Cutting", min_value=0.0, step=1.0)
-            Net_Net_Damage/RE/RE = st.number_input("Net_Net_Damage/RE/RE", min_value=0.0, step=1.0)
+            Net_Damage_RE = st.number_input("Net_Damage_RE", min_value=0.0, step=1.0)
             notes = st.text_area("Remarks / Notes", placeholder="မှတ်ချက်များ (လိုအပ်ပါက)...")
 
         submit_btn = st.form_submit_button("💾 Submit & Save Entry")
@@ -62,7 +62,7 @@ if app_mode == "📝 Data Entry (Staff)":
                 "OT": ot,
                 "Production": production,
                 "Cutting": cutting,
-                "Net_Net_Damage/RE/RE": Net_Net_Damage/RE/RE,
+                "Net_Damage_RE": Net_Damage_RE,
                 "Notes": notes
             }])
             
