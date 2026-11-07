@@ -52,7 +52,7 @@ if app_mode == "📝 Data Entry (Staff)":
         with col1:
             entry_date = st.date_input("Date", datetime.now())
             department = st.selectbox("Department", ["Extruding MoNo", "Weaving", "Mending-1","Scouring","Scouting RE","Stretching","Mending-2
-            ","Cutting","Packing MoNo])
+            ","Cutting","Packing MoNo"])
             
             # Attendance & OT
             attendance = st.number_input("Attendance (Employee)", min_value=0.0, step=1.0)
