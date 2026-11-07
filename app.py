@@ -64,23 +64,23 @@ if app_mode == "📝 Data Entry (Staff)":
             with col_p1:
                 production = st.number_input("Production", min_value=0.0, step=1.0, key="prod_input")
             with col_p2:
-                prod_unit = st.selectbox("Unit", ["kg", "pcs", "pot"], key="p_unit")
+                prod_unit = st.selectbox("Unit", ["kg", "pcs", "pot","bag"], key="p_unit")
             
             # Cutting with Unit
             col_c1, col_c2 = st.columns([2, 1])
             with col_c1:
                 cutting = st.number_input("Cutting", min_value=0.0, step=1.0, key="cut_input")
             with col_c2:
-                cut_unit = st.selectbox("Unit", ["kg", "pcs", "pot"], key="c_unit")
+                cut_unit = st.selectbox("Unit", ["kg", "pcs", "pot","bag"], key="c_unit")
             
             # Net_Damage_RE with Grade (B/C) and Unit
             col_d1, col_d2, col_d3 = st.columns([2, 1, 1])
             with col_d1:
                 net_damage = st.number_input("Net_Damage_RE", min_value=0.0, step=1.0, key="dmg_input")
             with col_d2:
-                damage_grade = st.selectbox("Grade", ["grade_B", "grade_C"], key="d_grade")
+                damage_grade = st.selectbox("Grade", ["grade_A","grade_B", "grade_C"], key="d_grade")
             with col_d3:
-                damage_unit = st.selectbox("Unit", ["kg", "pcs", "pot"], key="d_unit")
+                damage_unit = st.selectbox("Unit", ["kg", "pcs", "pot","bag"], key="d_unit")
 
         submit_btn = st.form_submit_button("💾 Submit & Save Entry")
         
