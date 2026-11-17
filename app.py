@@ -322,22 +322,28 @@ elif app_mode == "🔐 Admin Portal":
                             elif e_att == 0.0 and e_ot == 0.0:
                                 st.error("❌ ကျေးဇူးပြု၍ **Attendance** သို့မဟုတ် **OT** အနည်းဆုံး တစ်ခုခု ဖြည့်သွင်းပေးပါရန်။")
                             else:
-                                df.loc[df["ID"] == selected_id, "Date"] = e_date.strftime("%Y-%m-%d")
-                                df.loc[df["ID"] == selected_id, "Department"] = str(e_dept)
-                                df.loc[df["ID"] == selected_id, "Production"] = float(e_prod)
-                                df.loc[df["ID"] == selected_id, "Prod_Unit"] = str(e_prod_unit)
-                                df.loc[df["ID"] == selected_id, "Cutting"] = float(e_cut)
-                                df.loc[df["ID"] == selected_id, "Cut_Unit"] = str(e_cut_unit)
-                                df.loc[df["ID"] == selected_id, "Net_Damage_RE"] = float(e_dmg)
-                                df.loc[df["ID"] == selected_id, "Damage_Grade"] = str(e_grade)
-                                df.loc[df["ID"] == selected_id, "Damage_Unit"] = str(e_dmg_unit)
-                                df.loc[df["ID"] == selected_id, "Attendance"] = float(e_att)
-                                df.loc[df["ID"] == selected_id, "OT"] = float(e_ot)
-                                df.loc[df["ID"] == selected_id, "Notes"] = str(e_notes)
-                                
-                                if save_to_github(df, f"Update record ID {selected_id}"):
-                                    st.success(f"✅ Record ID {selected_id} ကို GitHub တွင် Update လုပ်ပြီးပါပြီ။")
-                                    st.rerun()
+                                # ကုဒ်အသစ် (Error ကင်းရှင်းစေရန်)
+                                    df.loc[df["ID"] == selected_id, ["Date", "Department", "Production", "Prod_Unit", 
+                                                                      "Cutting", "Cut_Unit", "Net_Damage_RE", 
+                                                                      "Damage_Grade", "Damage_Unit", "Attendance", 
+                                                                      "OT", "Notes"]] = [
+                                        e_date.strftime("%Y-%m-%d"),
+                                        str(e_dept),
+                                        float(e_prod),
+                                        str(e_prod_unit),
+                                        float(e_cut),
+                                        str(e_cut_unit),
+                                        float(e_dmg),
+                                        str(e_grade),
+                                        str(e_dmg_unit),
+                                        float(e_att),
+                                        float(e_ot),
+                                        str(e_notes)
+                                    ]
+                                    
+                                    if save_to_github(df, f"Update record ID {selected_id}"):
+                                        st.success(f"✅ Record ID {selected_id} ကို GitHub တွင် Update လုပ်ပြီးပါပြီ။")
+                                        st.rerun()
                             
                         if delete_btn:
                             df = df[df["ID"] != selected_id]
