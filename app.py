@@ -448,6 +448,7 @@ elif app_mode == "🔐 Admin Portal":
                 
                 st.markdown("---")
                 st.subheader(f"📋 Report Results ({rep_start_date} မှ {rep_end_date} အထိ)")
+                st.subheader(f"📊 KKF _ Daily Production Report — {rep_start_date}")
                 
                 if not report_df.empty:
                     m1, m2, m3, m4 = st.columns(4)
