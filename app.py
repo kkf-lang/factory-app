@@ -460,7 +460,7 @@ elif app_mode == "🔐 Admin Portal":
                     st.dataframe(report_df, use_container_width=True)
                     
                     if rep_dept == "All Departments":
-                        st.subheader("📊 Department-wise Summary Breakdown")
+                        st.subheader("📊 KKF _ Daily Production Report")
                         dept_summary = report_df.groupby("Department")[["Production", "Cutting", "Net_Damage_RE", "Attendance", "OT"]].sum().reset_index()
                         st.dataframe(dept_summary, use_container_width=True)
                     
