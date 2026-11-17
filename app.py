@@ -183,7 +183,7 @@ def load_data():
         "OT",
         "Notes",
         "Timestamp",])
-elif app_mode == "🔐 Admin Portal":
+if app_mode == "🔐 Admin Portal":
     st.title("🔐 Admin Management Portal")
     st.markdown("ဤနေရာသည် Admin များအတွက်သာဖြစ်ပြီး Data များကို စီမံခန့်ခွဲခြင်းနှင့် Report ထုတ်ခြင်းများ ပြုလုပ်နိုင်ပါသည်။")
     st.markdown("---")
