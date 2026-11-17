@@ -415,4 +415,4 @@ elif app_mode == "🔐 Admin Portal":
               e_cut = st.number_input(
                   "Cutting", value=float(selected_row["Cutting"])
               )
-              c_units = ["kg
+              c_units = ["kg"]
