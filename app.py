@@ -317,33 +317,49 @@ elif app_mode == "🔐 Admin Portal":
                             delete_btn = st.form_submit_button("🗑️ Delete Record")
                             
                         if update_btn:
-                            if e_prod <= 0.0:
-                                st.error("❌ ကျေးဇူးပြု၍ **Production** ပမာဏကို ထည့်သွင်းပေးပါရန်။ Production သည် 0 ထက် ကြီးရပါမည်။")
-                            elif e_att == 0.0 and e_ot == 0.0:
-                                st.error("❌ ကျေးဇူးပြု၍ **Attendance** သို့မဟုတ် **OT** အနည်းဆုံး တစ်ခုခု ဖြည့်သွင်းပေးပါရန်။")
-                            else:
-                                # ကုဒ်အသစ် (Error ကင်းရှင်းစေရန်)
-                                    df.loc[df["ID"] == selected_id, ["Date", "Department", "Production", "Prod_Unit", 
-                                                                      "Cutting", "Cut_Unit", "Net_Damage_RE", 
-                                                                      "Damage_Grade", "Damage_Unit", "Attendance", 
-                                                                      "OT", "Notes"]] = [
-                                        e_date.strftime("%Y-%m-%d"),
-                                        str(e_dept),
-                                        float(e_prod),
-                                        str(e_prod_unit),
-                                        float(e_cut),
-                                        str(e_cut_unit),
-                                        float(e_dmg),
-                                        str(e_grade),
-                                        str(e_dmg_unit),
-                                        float(e_att),
-                                        float(e_ot),
-                                        str(e_notes)
-                                    ]
-                                    
-                                    if save_to_github(df, f"Update record ID {selected_id}"):
-                                        st.success(f"✅ Record ID {selected_id} ကို GitHub တွင် Update လုပ်ပြီးပါပြီ။")
-                                        st.rerun()
+                          if e_prod <= 0.0:
+                            st.error(
+                                "❌ ကျေးဇူးပြု၍ **Production** ပမာဏကို ထည့်သွင်းပေးပါရန်။ Production"
+                                " သည် 0 ထက် ကြီးရပါမည်။"
+                            )
+                          elif e_att == 0.0 and e_ot == 0.0:
+                            st.error(
+                                "❌ ကျေးဇူးပြု၍ **Attendance** သို့မဟုတ် **OT** အနည်းဆုံး တစ်ခုခု"
+                                " ဖြည့်သွင်းပေးပါရန်။"
+                            )
+                          else:
+                            # ၁။ လက်ရှိ ID ပါတဲ့ row ကို ဖယ်ထုတ်မည်
+                            df_filtered = df[df["ID"] != selected_id].copy()
+                        
+                            # ၂. ပြင်ဆင်ထားသော တန်ဖိုးများဖြင့် row အသစ်တစ်ခု တည်ဆောက်မည်
+                            updated_row = pd.DataFrame([{
+                                "ID": selected_id,
+                                "Date": e_date.strftime("%Y-%m-%d"),
+                                "Department": str(e_dept),
+                                "Production": float(e_prod),
+                                "Prod_Unit": str(e_prod_unit),
+                                "Cutting": float(e_cut),
+                                "Cut_Unit": str(e_cut_unit),
+                                "Net_Damage_RE": float(e_dmg),
+                                "Damage_Grade": str(e_grade),
+                                "Damage_Unit": str(e_dmg_unit),
+                                "Attendance": float(e_att),
+                                "OT": float(e_ot),
+                                "Notes": str(e_notes),
+                                "Timestamp": (
+                                    str(selected_row["Timestamp"])
+                                    if "Timestamp" in selected_row
+                                    else str(datetime.now())
+                                ),
+                            }])
+                        
+                            # ၃. DataFrame အဟောင်းနှင့် အသစ်ကို ပေါင်းစပ်မည်
+                            df_final = pd.concat([df_filtered, updated_row], ignore_index=True)
+                        
+                            # ၄. GitHub သို့ သိမ်းဆည်းမည်
+                            if save_to_github(df_final, f"Update record ID {selected_id}"):
+                              st.success(f"✅ Record ID {selected_id} ကို GitHub တွင် အောင်မြင်စွာ Update လုပ်ပြီးပါပြီ။")
+                              st.rerun()
                             
                         if delete_btn:
                             df = df[df["ID"] != selected_id]
