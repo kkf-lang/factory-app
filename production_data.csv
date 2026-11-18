@@ -11,3 +11,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 10,2026-11-17,Scouring,14.0,pot,0.0,kg,0.0,grade_B,pot,27.0,23.0,,2026-11-18 07:13:56
 11,2026-11-17,Scouting RE,288.0,pcs,0.0,kg,492.0,grade_B,pcs,9.0,8.0,,2026-11-18 07:20:38
 12,2026-11-17,Mending-1,2320.0,pcs,81.0,pcs,217.0,grade_C,pcs,88.0,83.0,,2026-11-18 07:21:52
+13,2026-11-17,Mending-1,2320.0,pcs,81.0,pcs,217.0,grade_C,pcs,88.0,83.0,,2026-11-18 07:23:35
