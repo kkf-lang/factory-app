@@ -7,3 +7,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 7,2026-11-16,Extruding MoNo,545.19,kg,0.0,kg,89.0,grade_B,kg,26.0,26.0,,2026-11-17 09:29:42
 1,2026-11-16,Extruding MoNo,1519.0,kg,35.0,kg,15.0,grade_B,kg,81.0,2.0,,2026-11-17 01:58:20
 8,2026-11-17,Mending-2,1571.0,kg,22.0,kg,80.0,grade_B,kg,80.0,2.0,,2026-11-18 01:55:26
+9,2026-11-17,Mending-2,1571.0,kg,22.0,kg,80.0,grade_B,kg,80.0,2.0,,2026-11-18 01:56:40
