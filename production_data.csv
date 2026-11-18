@@ -1,8 +1,8 @@
 ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Grade,Damage_Unit,Attendance,OT,Notes,Timestamp
-1,2026-11-17,Mending-2,1519.0,kg,35.0,kg,15.0,grade_B,kg,81.0,2.0,,2026-11-17 01:58:20
 2,2026-11-16,Stretching,4063.0,pcs,0.0,kg,411.0,grade_B,pcs,54.0,50.0,,2026-11-17 04:24:07
 3,2026-11-16,Scouring,11.0,pot,0.0,kg,3.0,grade_B,pot,27.0,26.0,,2026-11-17 04:26:29
 4,2026-11-16,Mending-1,2246.0,pcs,61.0,pcs,259.0,grade_C,pcs,86.0,83.0,,2026-11-17 05:27:38
 5,2026-11-16,Scouring RE,702.0,pcs,0.0,kg,174.0,grade_B,pcs,10.0,10.0,,2026-11-17 08:31:20
 6,2026-11-14,Extruding MoNo,1137.1,kg,13.5,kg,0.0,grade_A,kg,27.0,18.0,,2026-11-17 09:27:07
 7,2026-11-16,Extruding MoNo,545.19,kg,0.0,kg,89.0,grade_B,kg,26.0,26.0,,2026-11-17 09:29:42
+1,2026-11-16,Extruding MoNo,1519.0,kg,35.0,kg,15.0,grade_B,kg,81.0,2.0,,2026-11-17 01:58:20
