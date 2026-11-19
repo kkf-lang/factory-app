@@ -17,3 +17,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 17,2026-11-18,Extruding MoNo,2389.2,kg,138.0,kg,0.0,grade_B,kg,26.0,25.0,,2026-11-19 07:38:06
 18,2026-11-18,Stretching,5421.0,pcs,0.0,kg,773.0,grade_B,pcs,53.0,51.0,,2026-11-19 07:54:06
 19,2026-11-18,Scouting RE,380.0,pcs,0.0,kg,290.0,grade_B,pcs,10.0,10.0,,2026-11-19 07:55:38
+20,2026-11-18,Scouring,12.0,pot,0.0,kg,0.0,grade_B,pot,27.0,26.0,,2026-11-19 08:47:44
