@@ -94,7 +94,7 @@ if app_mode == "📝 Data Entry (Staff)":
             entry_date = st.date_input("Date", value=date.today())
             department = st.selectbox(
                 "Department", 
-                ["Extruding MoNo", "Weaving", "Packing MoNo", "Mending-1","Mending-1 Machine","Mending-2" ,"Scouring", "Scouting RE", "Stretching"]
+                ["Extruding MoNo", "Weaving", "Packing MoNo", "Mending-1","Mending-1 Machine","Mending-2","Net Fix" ,"Scouring", "Scouting RE", "Stretching"]
             )
             
             attendance = st.number_input("Attendance (Employee) *", min_value=0.0, step=1.0, value=0.0, format="%.0f")
@@ -275,7 +275,7 @@ elif app_mode == "🔐 Admin Portal":
                         default_edit_date = parsed_selected_date.date() if pd.notna(parsed_selected_date) else date.today()
                         e_date = st.date_input("Date", value=default_edit_date)
                         
-                        dept_list = ["Extruding MoNo", "Weaving", "Packing MoNo", "Mending-1","Mending-1 Machine","Mending-2", "Scouring", "Scouting RE", "Stretching"]
+                        dept_list = ["Extruding MoNo", "Weaving", "Packing MoNo", "Mending-1","Mending-1 Machine","Mending-2","Net Fix", "Scouring", "Scouting RE", "Stretching"]
                         curr_dept = selected_row["Department"]
                         dept_idx = dept_list.index(curr_dept) if curr_dept in dept_list else 0
                         e_dept = st.selectbox("Department", dept_list, index=dept_idx)
