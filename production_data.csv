@@ -33,3 +33,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 33,2026-11-20,Stretching,1694.0,pcs,0.0,kg,1571.0,grade_B,pcs,53.0,47.0,,2026-11-21 04:42:13
 34,2026-11-20,Scouring,13.0,pot,0.0,kg,2.0,grade_B,pot,27.0,20.0,,2026-11-21 04:44:01
 35,2026-11-20,Scouting RE,809.0,pcs,0.0,kg,169.0,grade_B,pcs,10.0,8.0,,2026-11-21 07:13:24
+36,2026-11-20,Mending-1,2090.0,pcs,53.0,pcs,186.0,grade_C,pcs,87.0,69.0,,2026-11-21 09:59:34
