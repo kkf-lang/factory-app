@@ -35,3 +35,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 35,2026-11-20,Scouting RE,809.0,pcs,0.0,kg,169.0,grade_B,pcs,10.0,8.0,,2026-11-21 07:13:24
 36,2026-11-20,Mending-1,2090.0,pcs,53.0,pcs,186.0,grade_C,pcs,87.0,69.0,,2026-11-21 09:59:34
 37,2026-11-19,Extruding MoNo,1931.2,kg,0.0,kg,107.5,grade_C,kg,24.0,23.0,,2026-11-21 11:49:04
+38,2026-11-20,Extruding MoNo,2208.32,kg,0.0,kg,56.0,grade_C,kg,25.0,19.0,,2026-11-21 11:56:04
