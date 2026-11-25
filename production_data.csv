@@ -39,3 +39,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 39,2026-11-21,Mending-2,1646.0,pcs,88.0,pcs,77.0,grade_C,pcs,78.0,2.0,,2026-11-25 02:15:14
 40,2026-11-22,Mending-2,874.0,pcs,4.0,pcs,23.0,grade_C,pcs,42.0,1.0,,2026-11-25 02:17:23
 41,2026-11-21,Net Fix,339.0,pcs,1042.0,pcs,245.0,grade_C,pcs,30.0,25.0,,2026-11-25 03:29:09
+42,2026-11-25,Weaving,1500.0,kg,0.0,kg,50.0,grade_C,kg,70.0,65.0,,2026-11-25 03:34:41
