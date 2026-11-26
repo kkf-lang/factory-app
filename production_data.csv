@@ -49,3 +49,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 49,2026-11-25,Mending-2,2887.0,pcs,104.0,pcs,114.0,grade_C,pcs,74.0,0.0,,2026-11-26 02:38:44
 50,2026-11-25,Extruding MoNo,262.3,kg,0.0,kg,82.0,grade_C,kg,28.0,25.0,စက်များစတင်မောင်းသောကြောင့်ထုတ်လုပ်မှုနည်းပါသည်။,2026-11-26 03:45:45
 51,2026-11-25,Mending-1,1914.0,pcs,65.0,pcs,203.0,grade_C,pcs,86.0,78.0,,2026-11-26 06:37:36
+52,2026-11-25,Stretching,3442.0,pcs,0.0,kg,338.0,grade_B,pcs,51.0,49.0,,2026-11-26 11:32:23
