@@ -53,3 +53,4 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 53,2026-11-25,Scouring,13.0,pot,0.0,kg,0.0,grade_B,pot,21.0,20.0,,2026-11-26 11:34:33
 54,2026-11-26,Scouring,11.0,pot,0.0,kg,0.0,grade_B,pot,25.0,23.0,,2026-11-27 04:33:34
 55,2026-11-26,Stretching,2662.0,pcs,0.0,kg,309.0,grade_B,pcs,45.0,43.0,,2026-11-27 04:36:01
+56,2026-11-26,Mending-1,2158.0,pcs,91.0,pcs,118.0,grade_C,pcs,87.0,84.0,,2026-11-27 06:54:03
