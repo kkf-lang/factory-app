@@ -58,3 +58,6 @@ ID,Date,Department,Production,Prod_Unit,Cutting,Cut_Unit,Net_Damage_RE,Damage_Gr
 58,2026-11-26,Scouting RE,115.0,pcs,0.0,kg,233.0,grade_B,pcs,9.0,9.0,,2026-11-27 07:16:44
 59,2026-11-26,Extruding MoNo,1817.71,kg,0.0,kg,34.5,grade_C,kg,26.0,23.0,,2026-11-27 07:48:20
 60,2026-11-27,Net Fix,452.0,pcs,819.0,pcs,218.0,grade_C,pcs,31.0,31.0,,2026-11-28 01:02:24
+61,2026-11-27,Extruding MoNo,1560.68,kg,0.0,kg,126.0,grade_C,kg,25.0,23.0,"M02 Break down=3time
+M03 Break down=1time
+အပျက်အစီးများပါသည်။",2026-11-28 11:45:52
